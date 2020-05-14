@@ -1,6 +1,28 @@
   <ul>
-    <li> <a routerLink=''> Home </a>  </li>
-    <li> <a routerLink='projects'> Projects </a>  </li>
+    <li> <a routerLink='' 
+            routerLinkActive='Active' 
+              [routerLinkActiveOptions]= "{exact: true}"
+          > Home </a> 
+     </li>
+
+    <li> <a routerLink='projects'
+            routerLinkActive='Active'
+            [routerLinkActiveOptions]= "{exact: true}"
+          > Projects </a>
+    </li>
+
+    <li> <a routerLink='/profile' [queryParams]= "{ id: 1 }"
+            routerLinkActive='Active'
+            [routerLinkActiveOptions]= "{exact: true}"
+          > Profile User 1 </a>
+    </li>
+
+    <li> <a routerLink='/profile' [queryParams]= "{ id: 2 }"
+            routerLinkActive='Active'
+            [routerLinkActiveOptions]= "{exact: true}"
+          > Profile User 2 </a>
+    </li>
+
   </ul>
 
     <router-outlet></router-outlet>
